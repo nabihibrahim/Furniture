@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+/***********start navbar***********/
+nav{
+    background: rgba(0,0,0,0.5);
+}
+.navbar-brand{
+    font-size: 30px;
+    color: #fff;
+}
+.navbar-brand span{
+    color: #F82249;
+}
+nav ul li{
+    margin-right: 22px;
+}
+nav ul li a{
+    position: relative;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 16px;
+    padding: 15px !important;
+    transition: .3s;
+}
+nav ul li a.active,
+nav ul li a:hover{
+    color: #F82249;
+}
+nav ul li a::before,
+nav ul li a::after{
+    position: absolute;
+    content: '';
+    width: 45px;
+    height: 3px;
+    background-color: #fff;
+    transform: rotate(90deg);
+    transition: .3s;
+}
+nav ul li a::before{
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+}
+nav ul li a::after{
+    bottom: 3px;
+    right: 0;
+    transform-origin: 100% 0;
+}
+nav ul li .active::before,
+nav ul li a:hover::before{
+    transform: rotate(0deg);
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #F82249;
+}
+nav ul li .active::after,
+nav ul li a:hover::after{
+    transform: rotate(0deg);
+    right: 50%;
+    transform: translate(50%);
+    background-color: #F82249;
+}
+nav .navbar-toggler:focus{
+    border: none;
+    outline: none;
+}
+nav .navbar-toggler span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+}
+nav .navbar-toggler .two{
+    margin: 7px 0;
+}
+.top{
+    transform: rotate(-45deg) translate(-2px, 5px);
+}
+.bottom{
+    transform: rotate(45deg) translate(-8px, -11px);
+}
+.hidden{
+    opacity: 0;
+}
+/***********start navbar***********/
+
+/***********start header***********/
+.header{
+    height: 100vh;
+    position: relative;
+}
+.header .carousel,
+.header .carousel-inner,
+.header .carousel-item{
+    height: 100%;
+}
+.header img{
+    height: 500px;
+    width: 100%;
+    border-radius: 0 0 50% 50% /0 0 100% 100%;
+    transform: scale(1.5); 
+}
+.header .carousel-indicators{
+    bottom: 20px;
+}
+.header .carousel-indicators li{
+    transition: .3s;
+}
+.header .carousel-indicators li.active{
+    background-color: #F82249;
+}
+.header .carousel-indicators li:hover{
+    transform: rotate(180deg);
+}
+.header .info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+}
+.header .info p{
+    font-size: 32px;
+    font-weight: 700;
+}
+.header .info h2{
+    font-size: 50px;
+    margin: 30px 0;
+}
+.header .info .btn-danger{
+    border-radius: 50px;
+    padding: 10px 25px;
+    text-transform: capitalize;
+}
+/***********end header***********/
+
+/***********start about***********/
+.about{
+    background-color: #f9f9f9;
+    color: #444;
+    padding: 30px 0;
+}
+.about img{
+    height: 270px;
+}
+.about h4{
+    font-size: 16px;
+    font-weight: 700;
+}
+.about p,
+.about ul li{
+    font-size: 14px;
+}
+.about ul li{
+    margin-bottom: 15px;
+}
+.about i{
+    color: #F82249;
+    margin-right: 10px;
+}
+/***********end about***********/
+
+/***********start services***********/
+.services .box{
+    color: #444;
+}
+.services .box:hover i,
+.services .box:hover h5{
+    color: #F82249;
+}
+.services i{
+    transition: .3s;
+}
+.services h5{
+    margin: 20px 0;
+    font-size: 25px;
+    transition: .3s;
+}
+.services p{
+    font-size: 14px;
+}
+/***********end services***********/
+
+/***********start team***********/
+.team .image{
+    position: relative;
+}
+.team .box{
+    border: 1px solid #aaa;
+}
+.team .info h5{
+    font-size: 23px;
+    font-weight: 600;
+}
+.team .links{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-200%);
+    width: 100%;
+    text-align: center;
+    transition: 1s;
+}
+.team .links a{
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    text-decoration: none;
+    transition: .3s;
+}
+.team .links a:hover{
+    color: #F82249;
+    border: 1px solid #F82249;
+    background-color: #fff; 
+}
+.team .overlay{
+    opacity: 0;
+    transition: .5s;
+}
+.team .image:hover .overlay{
+    opacity: 1;
+}
+.team .image:hover .links{
+    transform: translate(-50%,-50%);
+}
+/***********end team***********/
+
+/***********start back***********/
+.back img{
+    height: 400px;
+}
+.back .info{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    color: #fff;
+    padding: 0 40px;
+}
+.back h4{
+    font-weight: 600;
+}
+.back p{
+    font-size: 18px;
+    font-weight: 600;
+}
+/***********end back***********/
+
+/***********start portfolio***********/
+.portfolio li{
+    color: #444;
+    border: 1px solid #444;
+}
+.portfolio .box{
+    position: relative;
+    height: 230px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.portfolio img{
+    height: 100%;
+}
+.portfolio .box .info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+}
+.portfolio .box h4{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.portfolio .overlay{
+    transform: translate(0,-30%);
+    opacity: 0;
+    transition: .5s;
+}
+.portfolio .box:hover .overlay{
+    transform: translate(0,0);
+    opacity: 1;
+}
+.portfolio .box a{
+    display: block;
+    height: 100%;
+}
+/***********end portfolio***********/
+
+/***********start testimonials***********/
+.testimonials{
+    height: 370px;
+    background-image: url(../images/header-3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.testimonials .carousel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 75%;
+}
+.testimonials .carousel-indicators{
+    position: unset;
+}
+.testimonials .carousel-indicators li{
+    transition: .3s;
+}
+.testimonials .carousel-indicators li.active{
+    background-color: #F82249;
+}
+.testimonials .carousel-indicators li:hover{
+    transform: rotate(180deg);
+}
+.testimonials .icon{
+    width: 70px;
+    height: 70px;
+    margin: 20px auto;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+.testimonials p{
+    font-size: 18px;
+    font-weight: 600;
+}
+.testimonials span{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+/***********end testimonials***********/
+
+/***********start contact***********/
+.contact .mid{
+    border-left: 1px solid #444;
+    border-right: 1px solid #444;
+}
+.contact .info{
+    padding: 20px 0;
+}
+.contact .icon{
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+    border: 1px solid #444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+.contact form input:focus,
+.contact form textarea:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: #aaa;
+}
+.contact form input{
+    padding: 20px 15px;
+    border-radius: 0;
+    box-shadow: none;
+}
+.contact form textarea{
+    box-shadow: none;
+}
+.contact form .btn-outline-danger{
+    color: #444;
+    border: 1px solid #444;
+}
+.contact form .btn-outline-danger:hover{
+    color: #fff;
+    border: 1px solid #F82249;
+}
+/***********end contact***********/
+
+/***********start footer***********/
+footer{
+    background-color: #f1f1f1;
+    padding: 20px 0;
+}
+footer p{
+    font-size: 15px;
+    margin: 0;
+    line-height: 27px;
+}
+/***********end footer***********/
+
+
+/***********button up***********/
+.up{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background: #F82249;
+    border: none;
+    border-radius: 50%;
+    text-transform: uppercase;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+.up:focus{
+    outline: none;
+}
+/***********start framework***********/
+.heading h2{
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.heading span{
+    width: 80px;
+    height: 3px;
+    display: block;
+    background-color: #F82249;
+    margin: 0 auto;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+}
+.btn-outline-danger{
+    border-radius: 50px;
+    padding: 10px 25px;
+    text-transform: capitalize;
+    color: #fff;
+    border:1px solid #F82249;
+}
+.btn-outline-danger:hover{
+    color: #fff;
+    border:1px solid #F82249;
+}
+.btn-outline-danger.active{
+    background: #F82249 !important;
+    border: 1px solid #F82249 !important;
+}
+/***********end framework***********/
+
+@media screen and (max-width:768px){
+    nav ul li a{
+        text-align: center;
+    }
+    .header .info{
+        width: 80%;
+    }
+    .about .info{
+        margin-top: 20px;
+    }
+    .contact .mid{
+        border-left: none;
+        border-right: none;
+    }
+}
+@media screen and (max-width:425px){
+    .header .info{
+        width: 80%;
+    }
+    .header .info p{
+        font-size: 90%;
+    }
+    .header .info h2{
+        font-size: 90%;
+    }
+    .header .info .btn-danger,
+    .header .info .btn-outline-danger{
+        padding: 2px 10px;
+    }
+    .testimonials .icon{
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+    .testimonials p{
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
+@media screen and (max-width:375px){
+    .portfolio .btn-outline-danger{
+        padding: 5px 12px;
+    }
+}
+@media screen and (max-width:320px){
+    .header .carousel-indicators{
+        bottom: 20px;
+    }
+    
+}
