@@ -14,6 +14,10 @@ $(document).ready(function(){
         $('.venobox').venobox(); 
     });
 
+    $('.portfolio ul li').on('click',function(){
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+
     //smooth scroll
     $('nav li a').on('click',function(){
 
